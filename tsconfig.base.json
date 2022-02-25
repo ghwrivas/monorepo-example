@@ -14,7 +14,20 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mx-onboarding-workspace/feature-home": [
+        "libs/feature-home/src/index.ts"
+      ],
+      "@mx-onboarding-workspace/feature-login": [
+        "libs/feature-login/src/index.ts"
+      ],
+      "@mx-onboarding-workspace/feature-otp": ["libs/feature-otp/src/index.ts"],
+      "@mx-onboarding-workspace/shared/components": [
+        "libs/shared/components/src/index.ts"
+      ],
+      "@mx-onboarding-workspace/shell-store": ["libs/shell-store/src/index.ts"],
+      "@mx-onboarding-workspace/shell-web": ["libs/shell-web/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

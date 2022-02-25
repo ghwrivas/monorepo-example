@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/feature-login",
+  "sourceRoot": "libs/feature-login/src",
+  "prefix": "mx-onboarding-workspace",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature-login"],
+      "options": {
+        "jestConfig": "libs/feature-login/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/feature-login/src/**/*.ts",
+          "libs/feature-login/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

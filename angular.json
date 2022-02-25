@@ -1,6 +1,14 @@
 {
   "version": 2,
   "projects": {
+    "feature-home": "libs/feature-home",
+    "feature-login": "libs/feature-login",
+    "feature-otp": "libs/feature-otp",
+    "shared-components": "libs/shared/components",
+    "shell-store": "libs/shell-store",
+    "shell-web": "libs/shell-web",
+    "web-store": "apps/web-store",
+    "web-store-e2e": "apps/web-store-e2e",
     "web-ui": "apps/web-ui",
     "web-ui-e2e": "apps/web-ui-e2e"
   }

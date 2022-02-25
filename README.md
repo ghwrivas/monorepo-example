@@ -2,104 +2,89 @@
 
 # MxOnboardingWorkspace
 
-This project was generated using [Nx](https://nx.dev).
+## Pasos que ejecute
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+### 1-Desinstale angular/cli
+`npm uninstall -g @angular/cli`
+</br>
+</br>
 
-🔎 **Smart, Fast and Extensible Build System**
+### 2-Limpiar cache
+`npm cache clean --force`
+</br>
+</br>
 
-## Quick Start & Documentation
+### 3-Instalar ultima version angular/cli (para trabajar con ultima version de angular)
 
-[Nx Documentation](https://nx.dev/angular)
+`npm install -g @angular/cli`
+</br>
+</br>
 
-[10-minute video showing all Nx features](https://nx.dev/getting-started/intro)
+### 4-Crear workspace
+`npx create-nx-workspace@latest`
+</br>
+</br>
 
-[Interactive Tutorial](https://nx.dev/tutorial/01-create-application)
+### 5-Instalar nx
+`npm install -g nx`
+</br>
+</br>
 
-## Adding capabilities to your workspace
+### 6-Creamos la lib share/components
+`nx g @nrwl/angular:lib --name=shared/components`
+</br>
+</br>
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+### 7-Creamos el componente header comun a todas las apps
+`nx g @nrwl/angular:component header --project=shared-components`
+</br>
+</br>
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+### 8-Creamos las apps web-ui y web-store
+`ng generate @nrwl/angular:application`
+</br>
+</br>
 
-Below are our core plugins:
+### 9-Ejecutamos ambas apps
+`ng serve web-ui --port=4100`
+</br>
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/community) you could add.
-
-## Generate an application
-
-Run `ng g @nrwl/angular:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@mx-onboarding-workspace/mylib`.
-
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+`ng serve web-store --port=4200`
+</br>
+</br>
 
 
+### 10-Creamos lib para feature login
+`nx g @nrwl/angular:lib --name=feature-login --routing`
+</br>
+</br>
 
+`nx g @nrwl/angular:component login  --project=feature-login`
+</br>
 
+### 11-Creamos lib para feature home
+`nx g @nrwl/angular:lib --name=feature-home --routing`
+</br>
 
+`nx g @nrwl/angular:component home  --project=feature-home`
+</br>
+</br>
 
-## ☁ Nx Cloud
+### 12-Creamos lib para feature otp
+`nx g @nrwl/angular:lib --name=feature-otp --routing`
+</br>
+</br>
 
-### Distributed Computation Caching & Distributed Task Execution
+`nx g @nrwl/angular:component otp  --project=feature-otp`
+</br>
+</br>
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+### 13-Creamos libs para shell-web y para shell-store
+`nx g @nrwl/angular:lib --routing --lazy --name=shell-web`
+</br>
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+`nx g @nrwl/angular:lib --routing --lazy --name=shell-store`
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+</br>
 
-Visit [Nx Cloud](https://nx.app/) to learn more.
+### 13-Al final se configuran las rutas para la app web y la app store. 
