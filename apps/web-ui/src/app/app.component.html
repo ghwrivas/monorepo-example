@@ -1,5 +1,10 @@
 <mx-onboarding-workspace-header></mx-onboarding-workspace-header>
 <div>
-  App web-ui
+  <h1>Todos</h1>
+
+  <ul>
+    <li *ngFor="let t of todos" class="todo">{{ t.title }}</li>
+  </ul>
+  <button (click)="addTodo()">Add</button>
 </div>
 <router-outlet></router-outlet>
