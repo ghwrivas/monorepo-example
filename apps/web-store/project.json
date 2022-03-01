@@ -61,7 +61,8 @@
           "browserTarget": "web-store:build:production"
         },
         "development": {
-          "browserTarget": "web-store:build:development"
+          "browserTarget": "web-store:build:development",
+          "proxyConfig": "apps/web-store/proxy.conf.json"
         }
       },
       "defaultConfiguration": "development"
