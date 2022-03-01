@@ -88,3 +88,11 @@
 </br>
 
 ### 13-Al final se configuran las rutas para la app web y la app store. 
+
+### 14-Instalar dependencia para crear un backend con nest
+`npm install -D @nrwl/nest@13.8.3`
+</br>
+
+### 15-Creamos la aplicacion backend
+`nx generate @nrwl/nest:application backend`
+</br>
